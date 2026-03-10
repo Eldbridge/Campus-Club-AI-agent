@@ -1,12 +1,8 @@
-# ==============================================
 # 创协 AI 咨询助手
-# ==============================================
 import streamlit as st
 import requests
 
-# ----------------------
-# 1. 网页基础设置
-# ----------------------
+# 网页基础设置
 st.set_page_config(
     page_title="创协 AI 助手",
     page_icon="🎓",
@@ -15,9 +11,7 @@ st.set_page_config(
 st.title("🎓 学校创新创业协会 AI 咨询助手")
 st.caption("我可以回答：招新、比赛、报名、活动、组队等问题")
 
-# ----------------------
-# 2. 从 Streamlit Secrets 安全读取密钥
-# ----------------------
+# 从 Streamlit Secrets 安全读取密钥
 try:
     API_KEY = st.secrets["API_KEY"]
     ENDPOINT_ID = st.secrets["ENDPOINT_ID"]
@@ -26,9 +20,7 @@ except:
 
 MODEL_URL = "https://ark.cn-beijing.volces.com/api/v3/chat/completions"
 
-# ----------------------
-# 3. 创协专属知识库（你可以随便改）
-# ----------------------
+#创协专属知识库
 CHUANGXIE_INFO = """
 你是学校创业协会AI助手，只根据以下信息回答，简洁、礼貌、口语化，不要编造：
 
@@ -46,9 +38,7 @@ CHUANGXIE_INFO = """
 5. 比赛组队渠道：拉群，群里自由组队（拉好了部长会把群二维码发你）
 """
 
-# ----------------------
-# 4. AI Agent 核心函数
-# ----------------------
+# AI Agent 核心函数
 def ai_agent_answer(question):
     headers = {
         "Authorization": f"Bearer {API_KEY}",
@@ -84,10 +74,8 @@ def ai_agent_answer(question):
         return result["choices"][0]["message"]["content"]
     except Exception as e:
         return f"⚠️ AI 暂时无法回答，可直接咨询创协部长。\n错误：{str(e)[:30]}"
+# 用户交互界面
 
-# ----------------------
-# 5. 用户交互界面
-# ----------------------
 user_question = st.text_input(
     "请问你想咨询什么？",
     placeholder="例如：怎么加入创协？有什么比赛？"
