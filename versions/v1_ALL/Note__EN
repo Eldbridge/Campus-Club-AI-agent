@@ -1,0 +1,16 @@
+# v1 
+## Key
+- Implemented basic chat functionality of the campus club AI assistant using pure function-based coding
+- Completed the core workflow of Streamlit UI construction and LLM API calling
+- Supported loading preset knowledge base content for Q&A
+
+## Limitations
+- Messy code structure with poor reusability
+- No exception handling, program crashes directly when API call fails
+- Knowledge base is hard-coded in the code, making modifications inconvenient
+- Low code readability, not conducive to subsequent iterations
+
+## Usage
+1. Install dependencies: pip install -r requirements.txt
+2. Configure your LLM API key in the code
+3. Run the project: streamlit run app_v1.py
