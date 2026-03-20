@@ -1,4 +1,4 @@
-# v1 
+# v1  Script Version
 ## Key
 - Implemented basic chat functionality of the campus club AI assistant using pure function-based coding
 - Completed the core workflow of Streamlit UI construction and LLM API calling
