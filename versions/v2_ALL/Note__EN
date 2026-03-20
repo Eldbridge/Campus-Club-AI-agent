@@ -1,4 +1,4 @@
-# v2
+# v2 OOP Refactored Version
 ## Key Improvements
 - Refactored code into object-oriented programming (OOP) structure, splitting into config class, AI logic class, and UI rendering class
 - Optimized code modularity to improve maintainability and reusability
