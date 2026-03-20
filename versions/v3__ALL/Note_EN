@@ -1,0 +1,16 @@
+# v3 Exception Handling Version
+## Key Improvements
+- Fully integrated `try-except` exception capture mechanism, covering scenarios such as API calls, file reading, and user input
+- Added user-friendly error messages to avoid direct program crashes
+- Improved system robustness and user experience, with normal prompts instead of crashes when failures occur
+- Retained the OOP structure and UI layout of v2, only enhancing stability
+
+## Limitations
+- Knowledge base is still hard-coded, not extracted into an independent file
+- No hot update of knowledge base, service restart required after modification
+- No logging implemented, making problem troubleshooting inconvenient
+
+## Usage
+1. Install dependencies: `pip install -r requirements.txt`
+2. Fill in your LLM API key in the config class
+3. Run the project: `streamlit run app_v3.py`
