@@ -1,0 +1,16 @@
+# v2
+## Key Improvements
+- Refactored code into object-oriented programming (OOP) structure, splitting into config class, AI logic class, and UI rendering class
+- Optimized code modularity to improve maintainability and reusability
+- Fine-tuned Streamlit UI layout to enhance user interaction experience
+- Separated business logic from interface code, facilitating subsequent function expansion
+
+## Limitations
+- Still no exception handling mechanism, insufficient stability
+- Knowledge base is still hard-coded in the class, requiring code changes for modifications
+- No performance optimization, slow loading of large knowledge bases
+
+## Usage
+1. Install dependencies: `pip install -r requirements.txt`
+2. Fill in your LLM API key in the config class
+3. Run the project: `streamlit run app_v2.py`
