@@ -1,0 +1,17 @@
+Key Improvements
+
+Separated knowledge base from code, storing all content in an independent local knowledge.txt
+
+Added local file monitoring; no need to restart the app after editing the txt
+
+AI automatically loads the latest knowledge base on the next query, with answers updated instantly
+
+Retained OOP structure and full exception handling from v3 for better stability
+
+Limitations
+
+Only supports local editing of the knowledge base; no remote modification feature
+
+RAG retrieval not implemented, which may affect accuracy with a large knowledge base
+
+No conversation history persistence
